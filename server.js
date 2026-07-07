@@ -46,6 +46,11 @@ app.get('/projects', async (req, res) => {
     const title = 'Service Projects';
     res.render('projects', { title });
 });
+
+app.get('/categories', async (req, res) => {
+    const title = 'Categories';
+    res.render('categories', { title });
+});
 // Define the port number the server will listen on
 const PORT = process.env.PORT || 3000;
 
