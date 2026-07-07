@@ -1,513 +1,312 @@
-/* =========================================
-   CSE 340 SERVICE NETWORK
-   Modern Premium UI
-========================================= */
+/* ==========================================
+   CSE 340 Service Network
+   Professional Responsive Stylesheet
+========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-:root{
-
-    --primary:#0057D9;
-    --secondary:#3A86FF;
-    --accent:#00C2FF;
-    --dark:#0F172A;
-    --gray:#64748B;
-    --light:#F8FAFC;
-    --white:#FFFFFF;
-
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* Root Colors */
+:root {
+    --primary: #005792;
+    --primary-dark: #003f6b;
+    --secondary: #f4f7fa;
+    --accent: #0096c7;
+    --text: #222;
+    --light-text: #555;
+    --white: #ffffff;
+    --border: #d6dce5;
+    --shadow: 0 4px 12px rgba(0,0,0,.1);
 }
 
-html{
-    scroll-behavior:smooth;
+/* Base */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background: var(--secondary);
+    color: var(--text);
+    margin: 10px auto;
 }
 
-body{
-
-    font-family:'Poppins',sans-serif;
-
-    background:
-    radial-gradient(circle at top left,#c8e6ff 0%,transparent 35%),
-    radial-gradient(circle at bottom right,#d8f4ff 0%,transparent 35%),
-    #eef4fb;
-
-    color:var(--dark);
-    min-height:100vh;
-
+/* Container */
+header,
+nav,
+main,
+footer {
+    width: min(1100px, 92%);
+    margin: auto;
 }
 
-/*==========================
-Container
-===========================*/
+/* ===========================
+   Header
+=========================== */
 
-#wrapper{
-
-    width:min(1200px,94%);
-    margin:35px auto;
-    background:rgba(255,255,255,.78);
-
-    backdrop-filter:blur(20px);
-
-    border-radius:24px;
-
-    overflow:hidden;
-
-    border:1px solid rgba(255,255,255,.4);
-
-    box-shadow:
-    0 20px 60px rgba(0,0,0,.12);
-
+header {
+    background: var(--primary);
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px 10px 0 0;
 }
 
-/*==========================
-HEADER
-===========================*/
-
-header{
-
-    padding:45px 60px;
-
-    background:linear-gradient(135deg,#0057D9,#4A8DFF);
-
-    color:white;
-
+header h1,
+header h2 {
+    color: white;
 }
 
-header h1{
+/* ===========================
+   Navigation
+=========================== */
 
-    font-size:3rem;
-
-    font-weight:800;
-
-    letter-spacing:.5px;
-
+nav {
+    background: var(--primary-dark);
+    margin-bottom: 30px;
+    border-radius: 0 0 10px 10px;
 }
 
-header p{
-
-    opacity:.9;
-
-    margin-top:10px;
-
-    font-size:1.1rem;
-
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-/*==========================
-Navigation
-===========================*/
-
-nav{
-
-    background:white;
-
-    box-shadow:0 4px 20px rgba(0,0,0,.05);
-
+nav li {
+    margin: 0;
 }
 
-nav ul{
-
-    list-style:none;
-
-    display:flex;
-
-    justify-content:center;
-
+nav a {
+    display: block;
+    padding: 16px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background .3s ease;
 }
 
-nav li{
-
-    margin:0;
-
+nav a:hover,
+nav a:focus {
+    background: var(--accent);
+    outline: none;
 }
 
-nav a{
+/* ===========================
+   Main Content
+=========================== */
 
-    display:block;
-
-    padding:20px 28px;
-
-    color:#222;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    position:relative;
-
-    transition:.3s;
-
+main {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
 }
 
-nav a::after{
-
-    content:"";
-
-    position:absolute;
-
-    bottom:12px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:0;
-
-    height:3px;
-
-    background:var(--primary);
-
-    transition:.3s;
-
+main h1 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 2.2rem;
 }
 
-nav a:hover{
-
-    color:var(--primary);
-
+main h2 {
+    color: #333;
+    margin-bottom: 20px;
 }
 
-nav a:hover::after{
-
-    width:70%;
-
+main p {
+    color: var(--light-text);
+    margin-bottom: 30px;
+    font-size: 1.05rem;
 }
 
-/*==========================
-MAIN
-===========================*/
+/* ===========================
+   Image
+=========================== */
 
-main{
-
-    padding:70px;
-
+.main-logo {
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
 }
 
-.hero{
+/* ===========================
+   Buttons (future use)
+=========================== */
 
-    display:grid;
-
-    grid-template-columns:1.1fr .9fr;
-
-    gap:60px;
-
-    align-items:center;
-
+button,
+.btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background .3s;
 }
 
-.hero h1{
-
-    font-size:3.4rem;
-
-    color:var(--primary);
-
-    margin-bottom:15px;
-
+button:hover,
+.btn:hover {
+    background: var(--primary-dark);
 }
 
-.hero h2{
+/* ===========================
+   Links
+=========================== */
 
-    font-size:1.8rem;
-
-    color:#444;
-
-    margin-bottom:20px;
-
+a {
+    color: var(--primary);
 }
 
-.hero p{
-
-    font-size:1.1rem;
-
-    color:var(--gray);
-
-    margin-bottom:35px;
-
-    max-width:650px;
-
+a:hover,
+a:focus {
+    color: var(--accent);
 }
 
-/*==========================
-Button
-===========================*/
+/* ===========================
+   Footer
+=========================== */
 
-.btn{
-
-    display:inline-block;
-
-    background:linear-gradient(135deg,#0057D9,#00C2FF);
-
-    color:white;
-
-    padding:16px 40px;
-
-    border-radius:60px;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:.35s;
-
-    box-shadow:0 15px 30px rgba(0,87,217,.25);
-
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.btn:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:0 25px 40px rgba(0,87,217,.35);
-
+footer a {
+    color: white;
 }
 
-/*==========================
-Logo
-===========================*/
-
-.hero-image{
-
-    display:flex;
-
-    justify-content:center;
-
+footer a:hover {
+    text-decoration: underline;
 }
 
-.main-logo{
+/* ===========================
+   Forms
+=========================== */
 
-    width:100%;
-
-    max-width:520px;
-
-    border-radius:24px;
-
-    transition:.4s;
-
-    box-shadow:
-
-    0 25px 45px rgba(0,0,0,.18);
-
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
-
-.main-logo:hover{
-
-    transform:scale(1.04) rotate(-1deg);
-
-}
-
-/*==========================
-Cards
-===========================*/
-
-.card{
-
-    background:white;
-
-    border-radius:20px;
-
-    padding:35px;
-
-    margin:25px 0;
-
-    transition:.35s;
-
-    box-shadow:
-
-    0 10px 30px rgba(0,0,0,.08);
-
-}
-
-.card:hover{
-
-    transform:translateY(-10px);
-
-}
-
-/*==========================
-Forms
-===========================*/
 
 input,
 textarea,
-select{
-
-    width:100%;
-
-    padding:15px;
-
-    border-radius:12px;
-
-    border:2px solid #E2E8F0;
-
-    margin-bottom:20px;
-
-    font-size:1rem;
-
-    transition:.3s;
-
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
 }
 
 input:focus,
 textarea:focus,
-select:focus{
-
-    border-color:var(--primary);
-
-    box-shadow:0 0 0 5px rgba(0,87,217,.15);
-
-    outline:none;
-
+select:focus {
+    outline: 3px solid #7dc8ff;
+    border-color: var(--primary);
 }
 
-/*==========================
-Tables
-===========================*/
+/* ===========================
+   Tables
+=========================== */
 
-table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
 }
 
-th{
-
-    background:var(--primary);
-
-    color:white;
-
+th,
+td {
+    border: 1px solid var(--border);
+    padding: 12px;
+    text-align: left;
 }
 
-th,td{
-
-    padding:16px;
-
-    border-bottom:1px solid #e5e7eb;
-
+th {
+    background: var(--primary);
+    color: white;
 }
 
-tr:hover{
-
-    background:#f6fbff;
-
+tr:nth-child(even) {
+    background: #f8f9fb;
 }
 
-/*==========================
-Footer
-===========================*/
+/* ===========================
+   Accessibility
+=========================== */
 
-footer{
-
-    background:#081F3F;
-
-    color:white;
-
-    text-align:center;
-
-    padding:35px;
-
+:focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: 2px;
 }
 
-/*==========================
-Accessibility
-===========================*/
+/* ===========================
+   Responsive Design
+=========================== */
 
-:focus-visible{
+@media (max-width: 768px) {
 
-    outline:3px solid #FFD54F;
+    main {
+        padding: 25px;
+    }
 
-    outline-offset:3px;
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
+    nav a {
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,.15);
+    }
+
+    main h1 {
+        font-size: 1.8rem;
+    }
+
+    main h2 {
+        font-size: 1.3rem;
+    }
+
+    .main-logo {
+        max-width: 320px;
+    }
 }
 
-/*==========================
-Responsive
-===========================*/
+@media (max-width: 480px) {
 
-@media(max-width:900px){
+    body {
+        font-size: 15px;
+    }
 
-.hero{
+    main {
+        padding: 20px;
+    }
 
-grid-template-columns:1fr;
+    header {
+        text-align: center;
+    }
 
-text-align:center;
+    main h1 {
+        font-size: 1.6rem;
+    }
 
-}
-
-.hero p{
-
-margin:auto auto 35px;
-
-}
-
-}
-
-@media(max-width:700px){
-
-header{
-
-padding:30px;
-
-text-align:center;
-
-}
-
-header h1{
-
-font-size:2.3rem;
-
-}
-
-nav ul{
-
-flex-direction:column;
-
-}
-
-main{
-
-padding:35px 20px;
-
-}
-
-.hero h1{
-
-font-size:2.3rem;
-
-}
-
-.hero h2{
-
-font-size:1.4rem;
-
-}
-
-.btn{
-
-width:100%;
-
-text-align:center;
-
-}
-
-}
-
-@media(max-width:480px){
-
-#wrapper{
-
-margin:0;
-
-width:100%;
-
-border-radius:0;
-
-}
-
+    main h2 {
+        font-size: 1.2rem;
+    }
 }
